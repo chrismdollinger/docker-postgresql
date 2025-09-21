@@ -2,14 +2,14 @@ services:
   database:
     image: postgres:17
     volumes:
-      - pgdata-17:/var/lib/pgsql/17/data
+      - pgdata-17:/var/lib/pgsql/17
     secrets:
       - postgres_password
     networks:
       - pgdb
     environment:
       POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
-      PGDATA: /var/lib/pgsql/17
+      PGDATA: /var/lib/pgsql/17/data
 
 networks:
   pgdb:
