@@ -22,3 +22,4 @@ secrets:
 
 volumes:
   pgdata-17:
+    external: true
